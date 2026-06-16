@@ -6,130 +6,223 @@
     <title>Tirth Bhatt | AI/ML Researcher & Developer</title>
     <style>
         :root {
-            --bg-color: #0d1117;
-            --text-color: #c9d1d9;
-            --accent-color: #58a6ff;
-            --card-bg: #161b22;
-            --border-color: #30363d;
+            --bg-color: #fafafa;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --heading-color: #0f172a;
+            --card-bg: #ffffff;
+            --accent-color: #3b82f6;
+            --border-color: #e2e8f0;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            color: var(--text-main);
+            line-height: 1.7;
             margin: 0;
             padding: 0;
         }
-        header {
-            padding: 4rem 2rem;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-        h1 {
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-            font-size: 2.5rem;
-        }
-        h2 {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            font-weight: 400;
-        }
+
         .container {
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 2rem;
         }
-        section {
+
+        /* Header Layout */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 0 4rem 0;
+            border-bottom: 1px solid var(--border-color);
             margin-bottom: 3rem;
         }
+
+        .header-text {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            margin: 0 0 0.5rem 0;
+            font-size: 2.8rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .header-photo {
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: var(--border-color);
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
         .section-title {
-            font-size: 1.75rem;
-            color: #ffffff;
-            border-bottom: 2px solid var(--border-color);
+            font-size: 1.5rem;
+            color: var(--heading-color);
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        p {
             margin-bottom: 1.5rem;
         }
+
+        /* Cards */
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
+            border-radius: 12px;
+            padding: 2rem;
             margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+        }
+
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 1rem;
         }
+
         .card-title {
-            font-size: 1.25rem;
-            color: #ffffff;
+            font-size: 1.2rem;
+            color: var(--heading-color);
             font-weight: 600;
             margin: 0;
         }
+
         .card-subtitle {
-            color: #8b949e;
-            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
+
+        ul {
+            padding-left: 1.25rem;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
         }
+
+        .skills-category h4 {
+            color: var(--heading-color);
+            margin: 0 0 1rem 0;
+            font-size: 1.05rem;
+        }
+
         .skill-tag {
-            background-color: rgba(88, 166, 255, 0.1);
-            color: var(--accent-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
             font-size: 0.85rem;
             display: inline-block;
-            margin: 0.2rem;
-            border: 1px solid rgba(88, 166, 255, 0.2);
+            margin: 0 0.4rem 0.5rem 0;
+            border: 1px solid var(--border-color);
         }
-        ul {
-            padding-left: 1.5rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .contact-links {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 2rem;
+                padding: 3rem 0;
+            }
+            .header-text {
+                padding-right: 0;
+            }
+            .contact-links {
+                justify-content: center;
+            }
+            .card-header {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Tirth Bhatt</h1>
-        <h2>M.Tech AI & Data Science Candidate | IndiaAI Fellow</h2>
-        <div class="contact-links">
-            <a href="mailto:tirth.bhatt@iitgn.ac.in">tirth.bhatt@iitgn.ac.in</a>
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-        </div>
-    </header>
-
     <div class="container">
-        
+        <header>
+            <div class="header-text">
+                <h1>Tirth Bhatt</h1>
+                <h2>M.Tech AI & Data Science Candidate | IndiaAI Fellow</h2>
+                <div class="contact-links">
+                    <a href="mailto:tirth.bhatt@iitgn.ac.in">tirth.bhatt@iitgn.ac.in</a>
+                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="header-photo">
+                <!-- Replace 'profile.jpg' with your actual image file name -->
+                <img src="profile.jpg" alt="Tirth Bhatt" class="profile-img">
+            </div>
+        </header>
+
         <section id="about">
-            <h3 class="section-title">About Me</h3>
+            <h3 class="section-title">About</h3>
             <p>
                 I am a researcher and developer specializing in Artificial Intelligence and Data Science, currently pursuing my M.Tech at IIT Gandhinagar. 
-                My primary research focuses on generative models (Diffusion Models, VAEs, State Space Models) and representation alignment for Indic languages. 
-                As an IndiaAI Fellow and researcher at Lingo Labs, I lead projects like Chitrabhasha, developing native Vision Language Models and India-centric datasets. 
-                I bridge the gap between academic research and production-level AI, with industry experience in building multi-agentic architectures, RAG systems, and robust LLM applications.
+                My primary research focuses on generative models, including Diffusion Models and Variational Autoencoders, alongside representation alignment for Indic languages. 
+                As an IndiaAI Fellow and researcher at Lingo Labs, I bridge the gap between academic research and production-level AI, with industry experience in building multi-agentic architectures, RAG systems, and robust NLP applications.
             </p>
         </section>
 
@@ -144,8 +237,7 @@
                 <ul>
                     <li>Leading the <strong>Chitrabhasha project</strong>, developing an India-centric image-caption dataset and a native Vision Language Model.</li>
                     <li>Researching multilingual text embeddings, flow matching, and contrastive learning setups for Indic languages.</li>
-                    <li>Conducting research on Black-Box Adversarial Vulnerabilities in LLM-Based Time Series Forecasting.</li>
-                    <li>Serving as a Lab Instructor for graduate-level machine learning courses.</li>
+                    <li>Investigating Black-Box Adversarial Vulnerabilities in LLM-Based Time Series Forecasting.</li>
                 </ul>
             </div>
 
@@ -156,8 +248,8 @@
                 </div>
                 <ul>
                     <li>Developed a Multi-Agent Architecture for civic authorities, reducing report generation time from weeks to minutes and enhancing decision-making efficiency by 30%.</li>
-                    <li>Developed an in-house multimodal architecture integrating AWS Titan, Cohere, and AI21 Jurassic models utilizing RAG for contextual, real-time answers (40% accuracy improvement).</li>
-                    <li>Led end-to-end Computer Vision model training for digitizing medical forms, achieving 90% accuracy.</li>
+                    <li>Built an in-house multimodal architecture integrating AWS Titan, Cohere, and AI21 Jurassic models, utilizing RAG for contextual, real-time answers to improve accuracy by 40%.</li>
+                    <li>Led end-to-end Computer Vision model training for digitizing legacy medical forms, achieving 90% accuracy in data extraction.</li>
                 </ul>
             </div>
         </section>
@@ -170,7 +262,7 @@
                     <h4 class="card-title">M.Tech in Artificial Intelligence and Data Science</h4>
                     <span class="card-subtitle">IIT Gandhinagar | 2025 - Present</span>
                 </div>
-                <p><strong>CPI:</strong> 9.0</p>
+                <p style="margin: 0; color: var(--text-muted);"><strong>CPI:</strong> 9.0</p>
             </div>
 
             <div class="card">
@@ -178,34 +270,34 @@
                     <h4 class="card-title">B.Tech in Computer Engineering</h4>
                     <span class="card-subtitle">L.D College of Engineering, GTU | 2019 - 2023</span>
                 </div>
-                <p><strong>CPI:</strong> 9.18</p>
+                <p style="margin: 0; color: var(--text-muted);"><strong>CPI:</strong> 9.18</p>
             </div>
         </section>
 
         <section id="skills">
             <h3 class="section-title">Technical Skills</h3>
             <div class="skills-grid">
-                <div>
-                    <h4 style="margin-top:0;">AI/ML & Research</h4>
-                    <span class="skill-tag">Large Language Models (LLMs)</span>
+                <div class="skills-category">
+                    <h4>AI/ML & Research</h4>
+                    <span class="skill-tag">Large Language Models</span>
                     <span class="skill-tag">Diffusion Models</span>
-                    <span class="skill-tag">Multi-Agentic Architecture</span>
+                    <span class="skill-tag">Multi-Agent Systems</span>
                     <span class="skill-tag">RAG</span>
                     <span class="skill-tag">PyTorch</span>
                     <span class="skill-tag">Computer Vision</span>
                 </div>
-                <div>
-                    <h4 style="margin-top:0;">Languages & Core</h4>
+                <div class="skills-category">
+                    <h4>Languages & Core</h4>
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">C++</span>
                     <span class="skill-tag">C</span>
                     <span class="skill-tag">SQL & NoSQL</span>
                     <span class="skill-tag">System Design</span>
                 </div>
-                <div>
-                    <h4 style="margin-top:0;">Cloud, Tools & Frameworks</h4>
-                    <span class="skill-tag">AWS (Cloud Practitioner Certified)</span>
-                    <span class="skill-tag">Azure Data Scientist Associate</span>
+                <div class="skills-category">
+                    <h4>Cloud & Frameworks</h4>
+                    <span class="skill-tag">AWS Cloud Practitioner</span>
+                    <span class="skill-tag">Azure Data Scientist</span>
                     <span class="skill-tag">Django / FastAPI</span>
                     <span class="skill-tag">Docker</span>
                     <span class="skill-tag">Git</span>
